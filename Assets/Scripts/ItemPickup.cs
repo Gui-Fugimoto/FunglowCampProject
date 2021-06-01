@@ -17,7 +17,7 @@ public class ItemPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up * Time.deltaTime * 180);
+         //transform.Rotate(Vector3.up * Time.deltaTime * 180);
     }
 
     void OnTriggerEnter(Collider other)
