@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class ItemPickup : MonoBehaviour
 {
-    [SerializeField]
+    
     public GameObject Item;
-    private Image myimage;
+    //private Image myimage;
+    private InventarioUI inventario;
+    public GameObject ItemBotao;
     void Start()
     {
-        
-       
+        //inventario = GameObject.FindGameObjectWithTag("Player").GetComponent<InventarioUI>();
     }
 
     // Update is called once per frame
@@ -20,14 +21,13 @@ public class ItemPickup : MonoBehaviour
         transform.Rotate(Vector3.up * Time.deltaTime * 180);
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-
-            Debug.Log("pickup item");
-            Destroy(Item);
-
+           Debug.Log("pegou item");
+           Destroy(Item);
+            
         }
     }
 

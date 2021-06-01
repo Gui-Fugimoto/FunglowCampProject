@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private string moveInputAxis = "Vertical";
     private string turnInputAxis = "Horizontal";
     public float moveSpeed = 1;
+    public float dashDuration = 1;
 
     void Start()
     {
@@ -21,9 +22,24 @@ public class PlayerController : MonoBehaviour
 
         ApplyInput(moveAxis, turnAxis);
 
+        if (Input.GetKeyUp("space"))
+        {
+            StartCoroutine(RollSpeed());
+          
+            
+        }
+
+
         //  move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
     }
 
+    IEnumerator RollSpeed()
+    {
+        
+        moveSpeed = 1;
+        yield return new WaitForSeconds(dashDuration);
+        moveSpeed = 0.2f;
+    }
     private void ApplyInput(float moveInput,
                             float turnInput)
     {
@@ -40,4 +56,6 @@ public class PlayerController : MonoBehaviour
     {
         transform.Translate(Vector3.right * input * moveSpeed);
     }
+
+ 
 }

@@ -11,22 +11,33 @@ public class InventarioUI : MonoBehaviour
     public GameObject Item;
     public GameObject RemoveButton;
     private GameObject Canvas;
+    //public bool[] isFull;
+    //public GameObject[] InventarioSlot;
     // Start is called before the first frame update
     void Start()
     {
       Canvas.GetComponent<Image>();
       Canvas.GetComponent<Button>();
+        myimage.enabled = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (myimage.enabled == true)
         {
-           
-            myimage.enabled = true;
             botaodropar.interactable = true;
             
         }
     }
+
+   // void OnTriggerExit(Collider other)
+    //{
+      //  if (other.CompareTag("Player"))
+      //  {
+     //       myimage.enabled = true;
+      //      botaodropar.interactable = true;
+      //  }
+    //}
 }
