@@ -5,30 +5,29 @@ using UnityEngine.UI;
 
 public class ItemPickup : MonoBehaviour
 {
-    [SerializeField]
-    public GameObject Item;
-    private Image myimage;
-    void Start()
-    {
-        
-       
-    }
+   
+   
+    public AudioClip[] sons;
 
-    // Update is called once per frame
-    void Update()
-    {
-         //transform.Rotate(Vector3.up * Time.deltaTime * 180);
-    }
 
+
+    public GameObject[] Itens= new GameObject[5];
+ 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            Itens[0].SetActive(false);    
+                AudioSource.PlayClipAtPoint(sons[0], transform.position);// som ao pegar item
+        }
 
-            Debug.Log("pickup item");
-            Destroy(Item);
-
+        if (other.CompareTag("Player"))
+        {
+            Itens[1].SetActive(false);
+                AudioSource.PlayClipAtPoint(sons[1], transform.position);// som ao pegar item
         }
     }
 
+
+   
 }
