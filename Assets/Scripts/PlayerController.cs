@@ -34,9 +34,9 @@ public class PlayerController : MonoBehaviour
     IEnumerator RollSpeed()
     {
 
-        moveSpeed = 0.5f;
+        moveSpeed = 0.3f;
         yield return new WaitForSeconds(dashDuration);
-        moveSpeed = 0.2f;
+        moveSpeed = 0.1f;
     }
 
     private void ApplyInput(float moveInput,
