@@ -10,6 +10,7 @@ public class Vidas : MonoBehaviour
     public int vidaAtual;
 
     
+    
     public Image tresVidas;
     public Image duasVidas;
     public Image umaVida;
@@ -69,6 +70,8 @@ public class Vidas : MonoBehaviour
         {
             Debug.Log("encostou");
             LevouDano();
+            GameObject child = gameObject.transform.Find("Sound Dano").gameObject;
+            child.GetComponent<AudioSource>().Play();
         }
     }
 }
