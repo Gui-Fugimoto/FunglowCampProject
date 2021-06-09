@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Inimigo
+  - Inventario
+  - Manager
   layers:
   - Default
   - TransparentFX

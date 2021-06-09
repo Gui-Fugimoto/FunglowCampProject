@@ -6,27 +6,96 @@ using UnityEngine.UI;
 public class InventarioUI : MonoBehaviour
 {
     [SerializeField]
-    public Image myimage;
-    public Button botaodropar;
-    public GameObject Item;
-    public GameObject RemoveButton;
-    private GameObject Canvas;
-    // Start is called before the first frame update
+    public AudioClip estilingue;
+    public GameObject[] itemarmazenado = new GameObject[5];
+    public GameObject[] btnsdroppar= new GameObject[5];
+    public GameObject[] Itens = new GameObject[5];
+    public GameObject Inventario;
     void Start()
     {
-      Canvas.GetComponent<Image>();
-      Canvas.GetComponent<Button>();
+
+        Inventario.SetActive(false);
+
+        itemarmazenado[0].SetActive(false);
+        itemarmazenado[1].SetActive(false);
+
+        btnsdroppar[0].SetActive(false);
+        btnsdroppar[1].SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+
+        if (Input.GetKeyUp(KeyCode.M))// ativa o inventario antes de pegar o item
         {
-           
-            myimage.enabled = true;
-            botaodropar.interactable = true;
-            
+            Inventario.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))// desativa o inventario antes de pegar o item
+        {
+            Inventario.SetActive(true);
+        }
+
+        if (Itens[0].activeSelf==false)// se já pegou o galho ativar no inventario
+        {
+            Inventario.SetActive(true);
+
+            itemarmazenado[0].SetActive(true);
+
+            btnsdroppar[0].SetActive(true);
+
+         
+        }
+
+        if (Itens[1].activeSelf == false)// se já pegou a pedra ativar no inventario
+        {
+            Inventario.SetActive(true);
+
+            itemarmazenado[1].SetActive(true);
+
+            btnsdroppar[1].SetActive(true);
+
+        }
+    }
+
+    public void OnPointerDown()
+    {
+        if (itemarmazenado[0].activeSelf == true && itemarmazenado[1].activeSelf==false)// aperta btndropar do galho e dropa
+        {
+            itemarmazenado[0].SetActive(false);
+
+
+            btnsdroppar[0].SetActive(false);
+
+            Itens[0].SetActive(true);
+
+        }
+        if (itemarmazenado[0].activeSelf == false && itemarmazenado[1].activeSelf==true)// aperta btndropar da pedra e dropa
+        {
+            itemarmazenado[1].SetActive(false);
+
+
+            btnsdroppar[1].SetActive(false);
+
+            Itens[1].SetActive(true);
+
+        }
+       
+    }
+
+    public void Craft()
+    {
+        if(itemarmazenado[0].activeSelf==true && itemarmazenado[1].activeSelf == true)// se tiver os dois items anteriores clica no panel do terceiro slot e cria o item
+        {
+            itemarmazenado[2].SetActive(true);
+            btnsdroppar[2].SetActive(true);
+            AudioSource.PlayClipAtPoint(estilingue, transform.position);
+
+           // Destroy(itemarmazenado[0]);
+          //  Destroy(btnsdroppar[0]);
+
+           // Destroy(itemarmazenado[1]);
+          //  Destroy(btnsdroppar[1]);
         }
     }
 }
