@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public float dashDuration = 1;
 
 
-
+  
    
 
     void Start()
@@ -34,15 +34,17 @@ public class PlayerController : MonoBehaviour
 
         float moveAxis = Input.GetAxis(moveInputAxis);
         float turnAxis = Input.GetAxis(turnInputAxis);
-       
+        AudioFootsteps();
 
         ApplyInput(moveAxis, turnAxis);
+
        
         if (Input.GetKeyUp("space"))
         {
             StartCoroutine(RollSpeed());
            
         }
+       
 
 
         //  move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -70,13 +72,66 @@ public class PlayerController : MonoBehaviour
     private void Move(float input)
     {
         transform.Translate(Vector3.forward * input * moveSpeed);
+       
 
-        GameObject child = player.transform.Find("Sound Footsteps").gameObject;
-        child.GetComponent<AudioSource>().Play();
+        //GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+       // child.GetComponent<AudioSource>().Play();
     }
     private void Turn(float input)
     {
         transform.Translate(Vector3.right * input * moveSpeed);
       
+    }
+
+    private void AudioFootsteps()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+            child.GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+            child.GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+            child.GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+            child.GetComponent<AudioSource>().Play();
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+            child.GetComponent<AudioSource>().Stop();
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+            child.GetComponent<AudioSource>().Stop();
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+            child.GetComponent<AudioSource>().Stop();
+        }
+
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            GameObject child = player.transform.Find("Sound Footsteps").gameObject;
+            child.GetComponent<AudioSource>().Stop();
+        }
+
     }
 }
