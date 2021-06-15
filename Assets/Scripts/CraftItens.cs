@@ -20,16 +20,19 @@ public class CraftItens : MonoBehaviour
     {
         if (necessários[0].enabled == true && necessários[1].enabled == true)
         {
-            //crafted[0].SetActive(true);
             itenconstruido[0].enabled = true;
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            itenconstruido[0].enabled = false;
+            necessários[0].enabled = false;
+            necessários[1].enabled = false;
+            crafted[0].SetActive(true);
         }
     }
 
-    void OnClick()
-    {
-        necessários[0].enabled = false;
-        necessários[1].enabled = false;
-    }
+   
 }
 
 

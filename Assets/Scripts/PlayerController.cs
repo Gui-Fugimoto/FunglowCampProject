@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public int storeWalk = 0;
     public SpriteRenderer  playerSprite;
 
+    [HideInInspector] public bool isFacingRight=true;
+
+
 
     void Start()
     {
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
         float moveAxis = Input.GetAxis(moveInputAxis);
         float turnAxis = Input.GetAxis(turnInputAxis);
+        isFacingRight = true;
         AudioFootsteps();
 
         ApplyInput(moveAxis, turnAxis);

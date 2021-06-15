@@ -12,6 +12,8 @@ public class Inventario : MonoBehaviour
 
     public bool Ativarcrafting;
     public GameObject crafting;
+    public AudioClip pickeditem;
+
 
 
 
@@ -21,12 +23,13 @@ public class Inventario : MonoBehaviour
         {
             Debug.Log("Pega Item");
             Destroy(listadeItens.transform.GetChild(0).gameObject);
+            AudioSource.PlayClipAtPoint(pickeditem, transform.position);
             for (int i = 0; i < Bag.Count; i++)
             {
                 if (Bag[i].GetComponent<Image>().enabled == false)
                 {
                     Bag[i].GetComponent<Image>().enabled = true;
-                    Bag[i].GetComponent<Image>().sprite = coll.GetComponent<SpriteRenderer>().sprite;
+                   // Bag[i].GetComponent<Image>().sprite = coll.GetComponent<SpriteRenderer>().sprite;
                     break;
                 }
             }
