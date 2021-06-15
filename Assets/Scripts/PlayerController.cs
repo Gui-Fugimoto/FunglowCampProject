@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1;
     public float dashDuration = 1;
 
-
+    [HideInInspector] public bool isFacingRight=true;
 
 
 
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
 
         float moveAxis = Input.GetAxis(moveInputAxis);
         float turnAxis = Input.GetAxis(turnInputAxis);
+        isFacingRight = true;
         AudioFootsteps();
 
         ApplyInput(moveAxis, turnAxis);
