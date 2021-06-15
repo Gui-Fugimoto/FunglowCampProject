@@ -58,9 +58,9 @@ public class PlayerController : MonoBehaviour
     {
         GameObject child = player.transform.Find("Sound Esquiva").gameObject;
         child.GetComponent<AudioSource>().Play();
-        moveSpeed = 0.3f;
+        moveSpeed = 0.4f;
         yield return new WaitForSeconds(dashDuration);
-        moveSpeed = 0.1f;
+        moveSpeed = 0.2f;
     }
 
     private void ApplyInput(float moveInput,
@@ -103,6 +103,8 @@ public class PlayerController : MonoBehaviour
             storeWalk++;
             playerAnim.SetInteger("PlayerWalk", storeWalk);
             playerSprite.flipX = true;
+            GameObject playerHitbox = player.transform.Find("AttackPos").gameObject;
+            playerHitbox.transform.localPosition =  new Vector3(-1.59f, 0.83f, 0);
 
         }
 
@@ -140,6 +142,8 @@ public class PlayerController : MonoBehaviour
             storeWalk--;
             playerAnim.SetInteger("PlayerWalk", storeWalk);
             playerSprite.flipX = false;
+            GameObject playerHitbox = player.transform.Find("AttackPos").gameObject;
+            playerHitbox.transform.localPosition = new Vector3(1.59f, 0.83f, 0); ;
 
         }
 

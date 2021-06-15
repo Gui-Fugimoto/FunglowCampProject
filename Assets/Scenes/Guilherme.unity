@@ -1399,6 +1399,7 @@ GameObject:
   - component: {fileID: 1387964654}
   - component: {fileID: 1387964653}
   - component: {fileID: 1387964655}
+  - component: {fileID: 1387964658}
   - component: {fileID: 1387964656}
   - component: {fileID: 1387964657}
   m_Layer: 0
@@ -1426,6 +1427,7 @@ MonoBehaviour:
   playerAnim: {fileID: 1365857583}
   storeWalk: 0
   playerSprite: {fileID: 1365857584}
+  isFacingRight: 1
 --- !u!4 &1387964654
 Transform:
   m_ObjectHideFlags: 0
@@ -1440,6 +1442,7 @@ Transform:
   - {fileID: 1931656833}
   - {fileID: 838305148}
   - {fileID: 1365857585}
+  - {fileID: 1542645397}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1490,6 +1493,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoPause: {fileID: 958410474}
+--- !u!114 &1387964658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387964652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a3ef0b50cee69408b14fc50035dd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0.3
+  attackPos: {fileID: 1542645397}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 256
+  attackRange: 1
+  damage: 0
 --- !u!114 &1531248312 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3481705962938047593, guid: b09f6fb2592ae884090378ead19df786,
@@ -1502,6 +1524,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1542645396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1542645397}
+  m_Layer: 0
+  m_Name: AttackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1542645397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542645396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.59, y: 0.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1387964654}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1742764212
 GameObject:
   m_ObjectHideFlags: 0
