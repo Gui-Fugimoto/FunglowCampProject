@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fa56bb8ed1998f044be7d9264e2b80bc
+guid: b217d2db55db8664c829a99cb88ccccb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6710772301198987808
-    second: teste de lado_0
+      213: 2880347507652402336
+    second: cabanas Angulo_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,13 +114,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: teste de lado_0
+      name: cabanas Angulo_0
       rect:
         serializedVersion: 2
-        x: 1044
-        y: 382
-        width: 3130
-        height: 2754
+        x: 1143
+        y: 483
+        width: 2705
+        height: 2392
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ede082b52c8ed2a0800000000000000
-      internalID: -6710772301198987808
+      spriteID: 0ac9d472ccc09f720800000000000000
+      internalID: 2880347507652402336
       vertices: []
       indices: 
       edges: []
