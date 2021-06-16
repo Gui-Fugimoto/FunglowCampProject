@@ -56,10 +56,12 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator RollSpeed()
     {
+        playerAnim.SetBool("Roll", true);
         GameObject child = player.transform.Find("Sound Esquiva").gameObject;
         child.GetComponent<AudioSource>().Play();
         moveSpeed = 0.4f;
         yield return new WaitForSeconds(dashDuration);
+        playerAnim.SetBool("Roll", false);
         moveSpeed = 0.2f;
     }
 
