@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TrocarCena : MonoBehaviour
 {
-    public string SampleScene;
+    public string Acampamento;
+    public string MenuInicial;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,12 @@ public class TrocarCena : MonoBehaviour
 
     public void trocaCena1()
     {
-        SceneManager.LoadScene(SampleScene);
+        SceneManager.LoadScene(Acampamento);
+    }
+
+    public void trocaCenaMenu()
+    {
+        SceneManager.LoadScene(MenuInicial);
     }
 
     public void Sair()

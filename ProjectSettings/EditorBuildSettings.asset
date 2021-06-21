@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuInicial.unity
     guid: 15d6a9ca3df25854a9b5e6b24b0d2c41
+  - enabled: 1
+    path: Assets/Scenes/Acampamento.unity
+    guid: e74c256af99ddbf4e835e7b603145a99
   m_configObjects: {}
