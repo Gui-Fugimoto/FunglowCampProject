@@ -11,6 +11,7 @@ public class PlayerMelee : MonoBehaviour
     public Transform attackPos;
     public LayerMask whatIsEnemies;
     public float attackRange;
+    public Animator Anim;
 
     public int damage;
 
@@ -32,6 +33,7 @@ public class PlayerMelee : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                 }
+                StartCoroutine(AttackAnimation());
             }
             timeBtwAttack = startTimeBtwAttack;
         }
@@ -45,5 +47,11 @@ public class PlayerMelee : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+    IEnumerator AttackAnimation()
+    {
+        Anim.SetBool("Attack", true);
+        yield return new WaitForSeconds(0.4f);
+        Anim.SetBool("Attack", false);
     }
 }
