@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public float bulletRate = 0.8f;
+    public float bulletRate = 0.2f;
     public Transform shootingPoint;
     public GameObject tiroestPrefab;
 
