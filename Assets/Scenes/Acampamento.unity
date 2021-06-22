@@ -140,6 +140,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoPause: {fileID: 608982758}
+--- !u!95 &139380928 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8750294811264414201, guid: db31f53735c47c047abe52cb6048193e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2044391899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &165115081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3168128303800224952, guid: 60709ad34e334ba45837c9311f38c354,
@@ -957,6 +963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amigo1
       objectReference: {fileID: 0}
+    - target: {fileID: 1013597945370711593, guid: 605f2d1bdd3c5c24ba43a7dd4ab31805,
+        type: 3}
+      propertyPath: m_TagString
+      value: Inimigo
+      objectReference: {fileID: 0}
     - target: {fileID: 4051934675888087580, guid: 605f2d1bdd3c5c24ba43a7dd4ab31805,
         type: 3}
       propertyPath: playerChar
@@ -1035,6 +1046,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861272775646254744, guid: c600d4435a8d0fe428feb91e67f1215d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Inimigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861272775646254745, guid: c600d4435a8d0fe428feb91e67f1215d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1861272775646254748, guid: c600d4435a8d0fe428feb91e67f1215d,
         type: 3}
@@ -1772,6 +1793,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3e1ac5616e269046a1fe2df7e793cc4, type: 3}
+--- !u!1 &1705199876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1861272775646254744, guid: c600d4435a8d0fe428feb91e67f1215d,
+    type: 3}
+  m_PrefabInstance: {fileID: 719505245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1705199882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705199876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2467687, y: 1, z: 1.2510498}
+  m_Center: {x: -0.03134567, y: 0, z: -0.03042057}
 --- !u!1 &1763830630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,6 +2214,11 @@ PrefabInstance:
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8750294811284081700, guid: db31f53735c47c047abe52cb6048193e,
+        type: 3}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 139380928}
     - target: {fileID: 8750294811284081701, guid: db31f53735c47c047abe52cb6048193e,
         type: 3}
       propertyPath: shootingPoint
