@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sprite
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: b4bba11d13bc8b44ca63879c91d35f7c, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -72,6 +72,7 @@ Material:
     - PixelSnap: 0
     - _AlphaClip: 0
     - _Blend: 0
+    - _Blerg: 0.5
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
