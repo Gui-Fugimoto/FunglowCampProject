@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1861272775646254746}
   - component: {fileID: 1861272775646254745}
   - component: {fileID: 1861272775646254749}
+  - component: {fileID: 8285413837168650451}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Inimigo
@@ -107,3 +108,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+--- !u!65 &8285413837168650451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861272775646254744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.213588, y: 1, z: 1.1387681}
+  m_Center: {x: 0.017855398, y: 0, z: 0.007353396}

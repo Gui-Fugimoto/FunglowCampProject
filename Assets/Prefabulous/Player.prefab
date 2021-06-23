@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8750294811198959027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.95, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8750294812261110149}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 8750294811284081702}
   - component: {fileID: 8750294811284081703}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -265,6 +265,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   attackRange: 1
+  Anim: {fileID: 0}
   damage: 0
 --- !u!114 &8750294811284081702
 MonoBehaviour:
@@ -280,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 3
   vidaAtual: 0
+  "imageMa\xE7acura": {fileID: 0}
   tresVidas: {fileID: 0}
   duasVidas: {fileID: 0}
   umaVida: {fileID: 0}
