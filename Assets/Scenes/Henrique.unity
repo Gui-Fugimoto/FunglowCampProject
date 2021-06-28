@@ -365,7 +365,7 @@ SpriteRenderer:
   m_Size: {x: 49.615913, y: 35.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &152503179
@@ -499,7 +499,7 @@ SpriteRenderer:
   m_Size: {x: 49.615913, y: 35.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &345127302
@@ -676,7 +676,7 @@ SpriteRenderer:
   m_Size: {x: 49.615913, y: 35.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &649250818
@@ -1007,7 +1007,7 @@ SpriteRenderer:
   m_Size: {x: 49.615913, y: 35.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &850840956
@@ -1225,7 +1225,7 @@ SpriteRenderer:
   m_Size: {x: 49.615913, y: 35.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1151965889
@@ -1388,7 +1388,7 @@ SpriteRenderer:
   m_Size: {x: 49.615913, y: 35.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1233512098
@@ -1717,6 +1717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 3
   vidaAtual: 0
+  "imageMa\xE7acura": {fileID: 0}
   tresVidas: {fileID: 1531248312}
   duasVidas: {fileID: 346331536}
   umaVida: {fileID: 48521146}
@@ -1798,7 +1799,7 @@ SpriteRenderer:
   m_Size: {x: 49.615913, y: 35.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1467254340
@@ -1967,7 +1968,7 @@ SpriteRenderer:
   m_Size: {x: 49.615913, y: 35.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1785269607
@@ -2401,21 +2402,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5027797931785823868, guid: 05367bdb3a39ddc46bb2f139e78a8546,
-        type: 3}
-      propertyPath: tresVidas
-      value: 
-      objectReference: {fileID: 1531248312}
-    - target: {fileID: 5027797931785823868, guid: 05367bdb3a39ddc46bb2f139e78a8546,
-        type: 3}
-      propertyPath: duasVidas
-      value: 
-      objectReference: {fileID: 346331536}
-    - target: {fileID: 5027797931785823868, guid: 05367bdb3a39ddc46bb2f139e78a8546,
-        type: 3}
-      propertyPath: umaVida
-      value: 
-      objectReference: {fileID: 48521146}
     - target: {fileID: 3481705962013821827, guid: b09f6fb2592ae884090378ead19df786,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2491,5 +2477,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasVidas
       objectReference: {fileID: 0}
+    - target: {fileID: 5027797931785823868, guid: 05367bdb3a39ddc46bb2f139e78a8546,
+        type: 3}
+      propertyPath: tresVidas
+      value: 
+      objectReference: {fileID: 1531248312}
+    - target: {fileID: 5027797931785823868, guid: 05367bdb3a39ddc46bb2f139e78a8546,
+        type: 3}
+      propertyPath: duasVidas
+      value: 
+      objectReference: {fileID: 346331536}
+    - target: {fileID: 5027797931785823868, guid: 05367bdb3a39ddc46bb2f139e78a8546,
+        type: 3}
+      propertyPath: umaVida
+      value: 
+      objectReference: {fileID: 48521146}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b09f6fb2592ae884090378ead19df786, type: 3}
