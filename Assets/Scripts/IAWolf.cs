@@ -17,6 +17,9 @@ public class IAWolf : MonoBehaviour
     public float timetowait = 3;
     public float distancetotrigger = 18;
     public float distancetoattack = 5;
+    Transform t;
+    public float fixedRotation = 5;
+    public GameObject Hitbox;
     public enum States
     {
         pursuit,
@@ -32,14 +35,17 @@ public class IAWolf : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Hitbox.SetActive(false);
+        t = transform;
         patrolposition = new Vector3(transform.position.x + Random.Range(-patrolDistance, patrolDistance), transform.position.y, transform.position.z + Random.Range(-patrolDistance, patrolDistance));
     }
 
     // Update is called once per frame
     void Update()
     {
+        t.eulerAngles = new Vector3(t.eulerAngles.x, fixedRotation, t.eulerAngles.z);
         StateMachine();
-        anim.SetFloat("BaiacuWalk", agent.velocity.magnitude);
+        anim.SetFloat("WalkCogu", agent.velocity.magnitude);
 
     }
 
@@ -111,9 +117,9 @@ public class IAWolf : MonoBehaviour
     {
         agent.isStopped = false;
         agent.destination = target.transform.position;
-        anim.SetBool("BaiacuWalkBool", true);
-        anim.SetBool("BaiacuAttack", false);
-        anim.SetBool("BaiacuDeath", false);
+        anim.SetBool("CoguWalk", true);
+        anim.SetBool("CoguAttack", false);
+        // anim.SetBool("BaiacuDeath", false);
         if (Vector3.Distance(transform.position, target.transform.position) < distancetoattack)
         {
             state = States.atacking;
@@ -127,8 +133,8 @@ public class IAWolf : MonoBehaviour
     void AttackState()
     {
         agent.isStopped = true;
-        anim.SetBool("BaiacuAttack", true);
-        anim.SetBool("BaiacuDeath", false);
+        StartCoroutine(HitboxSpawn());
+        // anim.SetBool("BaiacuDeath", false);
         if (Vector3.Distance(transform.position, target.transform.position) > distancetoattack + 1)
         {
             state = States.pursuit;
@@ -138,36 +144,36 @@ public class IAWolf : MonoBehaviour
     void StoppedState()
     {
         agent.isStopped = true;
-        anim.SetBool("BaiacuWalkBool", false);
-        anim.SetBool("BaiacuAttack", false);
-        anim.SetBool("BaiacuDeath", false);
+        anim.SetBool("CoguWalk", false);
+        anim.SetBool("CoguAttack", false);
+        // anim.SetBool("BaiacuDeath", false);
     }
 
     void DeadState()
     {
         agent.isStopped = true;
-        anim.SetBool("BaiacuWalkBool", false);
-        anim.SetBool("BaiacuAttack", false);
-        anim.SetBool("BaiacuBreath", true);
-        anim.SetBool("BaiacuDeath", false);
+        anim.SetBool("CoguWalk", false);
+        anim.SetBool("CoguAttack", false);
+        // anim.SetBool("BaiacuDeath", false);
     }
 
     void DamageState()
     {
         agent.isStopped = true;
-        anim.SetBool("BaiacuWalkBool", false);
-        anim.SetBool("BaiacuDeath", true);
+        anim.SetBool("CoguWalk", false);
+        anim.SetBool("CoguDano", true);
     }
 
     void PatrolState()
     {
         agent.isStopped = false;
         agent.SetDestination(patrolposition);
-        anim.SetBool("BaiacuAttack", false);
+        anim.SetBool("CoguAttack", false);
         //tempo parado
         if (agent.velocity.magnitude < 0.1f)
         {
             stoppedTime += Time.deltaTime;
+            anim.SetBool("CoguWalk", false);
         }
         //se for mais q timetowait segundos
         if (stoppedTime > timetowait)
@@ -180,6 +186,14 @@ public class IAWolf : MonoBehaviour
         {
             state = States.pursuit;
         }
+    }
+    IEnumerator HitboxSpawn()
+    {
+        anim.SetBool("CoguAttack", true);
+        yield return new WaitForSeconds(1f);
+        Hitbox.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        Hitbox.SetActive(false);
     }
 
 }

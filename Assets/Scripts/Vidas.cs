@@ -15,6 +15,7 @@ public class Vidas : MonoBehaviour
     public Image tresVidas;
     public Image duasVidas;
     public Image umaVida;
+    public bool isInvincible;
 
     public string SampleScene;
 
@@ -70,6 +71,7 @@ public class Vidas : MonoBehaviour
     {
         vidaAtual -= 1;
 
+
         if (vidaAtual == 3)
         {
             tresVidas.enabled = true;
@@ -103,15 +105,22 @@ public class Vidas : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter(Collision col)
+    public void OnTriggerEnter(Collider other)
     {
-        if (col.gameObject.CompareTag("Inimigo"))
+        if (other.gameObject.CompareTag("Hitbox") && (isInvincible == false))
         {
             Debug.Log("encostou");
             LevouDano();
             GameObject child = gameObject.transform.Find("Sound Dano").gameObject;
             child.GetComponent<AudioSource>().Play();
+            StartCoroutine(InvincibilityFrames());
         }
+    }
+    IEnumerator InvincibilityFrames()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(2f);
+        isInvincible = false;
     }
 }
 
