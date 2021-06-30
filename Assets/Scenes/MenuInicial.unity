@@ -264,7 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e78dd3b56d3054294951d6303dfee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acampamento: Acampamento
+  Acampamento: Cutscene1
+  MenuInicial: 
 --- !u!1 &285086552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,3 +1009,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Acampamento: 
+  MenuInicial: 
