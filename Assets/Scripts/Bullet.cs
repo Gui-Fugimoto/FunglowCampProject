@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = transform.right * bulletSpeed;
+        Destroy(gameObject,1f);
     }
 
     private void OnTriggerEnter(Collider other)
