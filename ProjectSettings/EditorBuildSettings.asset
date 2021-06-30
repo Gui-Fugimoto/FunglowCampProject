@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene1.unity
     guid: 79d5509e6aba4a543bb6aa953644c696
   - enabled: 1
-    path: Assets/Scenes/Caverna.unity
+    path: Assets/Scenes/Caverna2.unity
     guid: 9b985d30b305592449bc0020aa760e5f
   - enabled: 1
     path: Assets/Scenes/InsideCave.unity
