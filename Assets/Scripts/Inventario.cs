@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Inventario : MonoBehaviour
 {
     public List<GameObject> Bag = new List<GameObject>();
+    //public List<Sprite> itens = new List<Sprite>();
+
     public GameObject inventario;
     public bool Ativarinventario;
     public GameObject listadeItens;
@@ -14,36 +16,30 @@ public class Inventario : MonoBehaviour
     public GameObject crafting;
     public AudioClip pickeditem;
 
-
+    void Start()
+    {
+        var sprite = Resources.Load<Sprite>("Itens/Galho/pedra/maçacura");
+    }
 
 
     void OnTriggerEnter(Collider coll)
     {
         if (coll.CompareTag("Item"))
         {
-            Debug.Log("Pega Item");
             Destroy(listadeItens.transform.GetChild(0).gameObject);
+            Debug.Log("Pega Item");
             AudioSource.PlayClipAtPoint(pickeditem, transform.position);
             for (int i = 0; i < Bag.Count; i++)
             {
                 if (Bag[i].GetComponent<Image>().enabled == false)
                 {
+                   
                     Bag[i].GetComponent<Image>().enabled = true;
-                   // Bag[i].GetComponent<Image>().sprite = coll.GetComponent<SpriteRenderer>().sprite;
                     break;
                 }
             }
         }
     }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Ativarinventario)
