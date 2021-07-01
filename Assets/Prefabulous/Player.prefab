@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8750294811198959024}
+  - component: {fileID: 7079248673033350114}
   m_Layer: 0
   m_Name: firingpoint
   m_TagString: Untagged
@@ -30,6 +31,18 @@ Transform:
   m_Father: {fileID: 8750294812261110149}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7079248673033350114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750294811198959027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c2b87b02a5ce54fb55e00f4ea1b2fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8750294811264414200
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,10 +158,10 @@ GameObject:
   - component: {fileID: 8750294811284081723}
   - component: {fileID: 8750294811284081698}
   - component: {fileID: 8750294811284081721}
-  - component: {fileID: 8750294811284081701}
   - component: {fileID: 8750294811284081700}
   - component: {fileID: 8750294811284081702}
   - component: {fileID: 8750294811284081703}
+  - component: {fileID: 8912872949796670875}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -207,13 +220,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d68a5ebc43df9f4e8882c3058a601b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bag: []
+  Bag:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   inventario: {fileID: 0}
   Ativarinventario: 0
   listadeItens: {fileID: 0}
+  counter: 0
   Ativarcrafting: 0
   crafting: {fileID: 0}
   pickeditem: {fileID: 0}
+  Teste: {fileID: 0}
 --- !u!54 &8750294811284081721
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -230,23 +251,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &8750294811284081701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8750294811284081722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06d5a4f340f3a7e469ba3b02aa6253d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletRate: 0.2
-  shootingPoint: {fileID: 0}
-  tiroestPrefab: {fileID: 0}
-  haveest: {fileID: 0}
-  fire: {fileID: 0}
 --- !u!114 &8750294811284081700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +289,8 @@ MonoBehaviour:
   tresVidas: {fileID: 0}
   duasVidas: {fileID: 0}
   umaVida: {fileID: 0}
-  SampleScene: SampleScene
+  isInvincible: 0
+  Floresta: 
 --- !u!114 &8750294811284081703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +304,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoPause: {fileID: 0}
+--- !u!114 &8912872949796670875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750294811284081722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 526d4c76dc9b5dc4ab76cc59b2dbc69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletEs: {fileID: 6769425191886819223, guid: 7090e060c1b26cd42b587d9e3d735b6a,
+    type: 3}
+  haveEs: {fileID: 8750294811779845550}
 --- !u!1 &8750294811438760514
 GameObject:
   m_ObjectHideFlags: 0
