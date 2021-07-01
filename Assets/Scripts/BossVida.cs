@@ -20,7 +20,7 @@ public class BossVida : MonoBehaviour
         if (health < 1)
         {
             iastar.Dead();
-            //StartCoroutine(RebornTime());
+            StartCoroutine(RebornTime());
         }
     }
 
