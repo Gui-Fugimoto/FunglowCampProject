@@ -611,7 +611,7 @@ MonoBehaviour:
   parte1: {fileID: 1774871033}
   parte2: {fileID: 2114188371}
   parte3: {fileID: 1922617345}
-  InsideCave: InsideCave
+  InsideCave: Cova
   Caverna: Caverna
   btnPressed: 0
 --- !u!1 &1449590102
