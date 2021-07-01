@@ -24175,7 +24175,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerChar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1765832712}
     - target: {fileID: 3325518428865186775, guid: 20c3944d1a506c2428c6fe12af815cc2,
         type: 3}
       propertyPath: m_FlipX
@@ -34027,8 +34027,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   iastar: {fileID: 7827403627221457124}
-  tempoReborn: 10000000
-  health: 3
+  tempoReborn: 10000
+  health: 10
 --- !u!1 &7827403628121253530
 GameObject:
   m_ObjectHideFlags: 0
