@@ -11,35 +11,28 @@ public class Inventario : MonoBehaviour
     public GameObject inventario;
     public bool Ativarinventario;
     public GameObject listadeItens;
-
+   
+    public int counter;
     public bool Ativarcrafting;
     public GameObject crafting;
     public AudioClip pickeditem;
+    public Sprite Teste;
 
     void Start()
     {
-        var sprite = Resources.Load<Sprite>("Itens/Galho/pedra/maçacura");
+        counter = 0;
+        
     }
 
-
-    void OnTriggerEnter(Collider coll)
+    public void Itens(Sprite objeto)
     {
-        if (coll.CompareTag("Item"))
-        {
-            Destroy(listadeItens.transform.GetChild(0).gameObject);
-            Debug.Log("Pega Item");
-            AudioSource.PlayClipAtPoint(pickeditem, transform.position);
-            for (int i = 0; i < Bag.Count; i++)
-            {
-                if (Bag[i].GetComponent<Image>().enabled == false)
-                {
-                   
-                    Bag[i].GetComponent<Image>().enabled = true;
-                    break;
-                }
-            }
-        }
+        Debug.Log(objeto);
+        Bag[counter].GetComponent<Image>().sprite = objeto;
+        counter++;
+        
     }
+
+    
     void Update()
     {
         if (Ativarinventario)
