@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3710926927624394528}
   - component: {fileID: 3710926927624394529}
   m_Layer: 0
-  m_Name: "ma\xE7acura"
+  m_Name: macacura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,8 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3710926927706661068}
   - component: {fileID: 3710926927706661071}
+  - component: {fileID: 4853450469956512935}
   m_Layer: 0
-  m_Name: "colliderma\xE7a"
+  m_Name: maca
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,6 +127,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.883025, y: 6.45515, z: 8.085687}
   m_Center: {x: 0.16333552, y: 2.2750006, z: -1.6013441}
+--- !u!114 &4853450469956512935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710926927706661069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117930aa3a20a8a47b220d4e58c438b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemGO: {fileID: 3710926927624394542}
+  Jogador: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 84fca72ec1d1bef45b4f1b444419edbe, type: 3}
 --- !u!1 &3710926928228309864
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,8 +267,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3710926928646308136}
   - component: {fileID: 3710926928646308139}
+  - component: {fileID: 4215076738140364038}
   m_Layer: 0
-  m_Name: colliderpedra
+  m_Name: pedra
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,6 +302,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.883025, y: 6.45515, z: 11.674392}
   m_Center: {x: 0.16333549, y: 2.2750003, z: -1.4067771}
+--- !u!114 &4215076738140364038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710926928646308137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117930aa3a20a8a47b220d4e58c438b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemGO: {fileID: 3710926928228309864}
+  Jogador: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 9f23f63ca01a9364bb6688d0f39e346d, type: 3}
 --- !u!1 &3710926928883457432
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,8 +327,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3710926928883457435}
   - component: {fileID: 3710926928883457434}
+  - component: {fileID: 797092147042986785}
   m_Layer: 0
-  m_Name: collideritem
+  m_Name: Galho
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,6 +362,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999999, y: 1.4525753, z: 0.19994706}
   m_Center: {x: 0, y: -0.22628768, z: -0.40002638}
+--- !u!114 &797092147042986785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710926928883457432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117930aa3a20a8a47b220d4e58c438b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemGO: {fileID: 3710926929087450956}
+  Jogador: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 9bf364d8b31763e4a89280b2c946b778, type: 3}
 --- !u!1 &3710926929087450956
 GameObject:
   m_ObjectHideFlags: 0
