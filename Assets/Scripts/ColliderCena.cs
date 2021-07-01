@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ColliderCena : MonoBehaviour
 {
-    public string CavernaCutscene;
+    public string Cova;
     public GameObject Player;
     // Start is called before the first frame update
     void Start()
@@ -15,11 +15,11 @@ public class ColliderCena : MonoBehaviour
 
     public void trocaPraCaverna()
     {
-        SceneManager.LoadScene(CavernaCutscene);
+        SceneManager.LoadScene(Cova);
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             trocaPraCaverna();
         }

@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a52c6cd8815183458deeb32f1dc5dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CavernaCutscene: CavernaCutscene
+  Cova: Cova
   Player: {fileID: 19112868}
 --- !u!4 &38232460 stripped
 Transform:

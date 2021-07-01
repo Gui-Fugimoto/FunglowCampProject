@@ -19,7 +19,7 @@ public class CaveExit : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             trocaPraFloresta();
         }

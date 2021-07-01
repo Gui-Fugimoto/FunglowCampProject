@@ -17,7 +17,7 @@ public class Vidas : MonoBehaviour
     public Image umaVida;
     public bool isInvincible;
 
-    public string SampleScene;
+    public string Floresta;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +55,7 @@ public class Vidas : MonoBehaviour
         if (vidaAtual <= 0)
         {
             Debug.Log("perdeu");
-            SceneManager.LoadScene(SampleScene);
+            SceneManager.LoadScene(Floresta);
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && imageMaçacura.enabled == true)
@@ -96,7 +96,7 @@ public class Vidas : MonoBehaviour
         if (vidaAtual <= 0)
         {
             Debug.Log("perdeu");
-            SceneManager.LoadScene(SampleScene);
+            SceneManager.LoadScene(Floresta);
         }
     }
 
