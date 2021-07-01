@@ -7,32 +7,29 @@ using UnityEngine.UI;
 public class CraftItens : MonoBehaviour
 {
     public GameObject[] crafted;
-    public Image[] itenconstruido;
-    public Image[] necessários;
+    public GameObject itenconstruido;
+    public GameObject Galho;
+    public GameObject Pedra;
     // Start is called before the first frame update
     void Start()
     {
-
+        itenconstruido.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (necessários[0].enabled == true && necessários[1].enabled == true)
+        if (Galho == null && Pedra == null)
         {
-            itenconstruido[0].enabled = true;
-        }
+            itenconstruido.SetActive(true);
 
-        if (Input.GetMouseButton(0))
-        {
-            itenconstruido[0].enabled = false;
-            necessários[0].enabled = false;
-            necessários[1].enabled = false;
-            crafted[0].SetActive(true);
+            if (Input.GetMouseButton(0))
+            {
+                Destroy(itenconstruido.GetComponent<Image>());
+                crafted[0].SetActive(true);
+            }
         }
     }
-
-   
 }
 
 
