@@ -19935,7 +19935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a52c6cd8815183458deeb32f1dc5dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CavernaCutscene: CavernaCutscene
+  CavernaCutscene: 
   Player: {fileID: 1765832712}
 --- !u!4 &1320609388 stripped
 Transform:
