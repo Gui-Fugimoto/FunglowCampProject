@@ -172,7 +172,6 @@ public class IACogumelo : MonoBehaviour
     void DamageState()
     {
         agent.isStopped = true;
-        anim.SetBool("CoguDano", true);
         anim.SetBool("CoguWalk", false);
         anim.SetBool("CoguDano", true);
     }

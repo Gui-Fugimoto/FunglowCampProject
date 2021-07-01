@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public Animator anim;
     public IACogumelo iastar;
-
+    public float tempoReborn;
     public int health;
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator RebornTime()
     {
-        yield return new WaitForSeconds(25f);
+        yield return new WaitForSeconds(tempoReborn);
         health = 3;
         iastar.RebornState();
     }
