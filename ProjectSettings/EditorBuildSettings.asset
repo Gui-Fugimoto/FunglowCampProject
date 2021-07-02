@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CavernaCutscene.unity
     guid: 1d3db84cf92476441b11681cbc49d3a1
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: fab17d3b6a538d542876e2710903b033
   m_configObjects: {}
