@@ -1038,7 +1038,7 @@ MonoBehaviour:
     sentences:
     - "Ver\xE3o de 2002\n"
     - " Todo ver\xE3o, pais de alunos enviam seus filhos a Funglow Camp."
-    - "Um acampamento para todos tipo de garotos, desde os mais comportados at\xE9
+    - "Um acampamento para todos tipos de garotos, desde os mais comportados at\xE9
       os mais encrenqueiros..."
     - "Kevin definitivamente n\xE3o queria estar ali."
     - "Foi mandado para o acampamento contra sua vontade,\r\nap\xF3s v\xE1rios epis\xF3dios
@@ -1221,7 +1221,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 86e623d3d877ef445a28f1549a32e23b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.34
+  m_Volume: 0.28
   m_Pitch: 1
   Loop: 1
   Mute: 0

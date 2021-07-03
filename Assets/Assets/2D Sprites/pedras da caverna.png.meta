@@ -123,27 +123,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pedras da caverna_0
-      rect:
-        serializedVersion: 2
-        x: 1402
-        y: 3152
-        width: 119
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1191f2fa547782ce0800000000000000
-      internalID: -1429761740514584303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: pedras da caverna_1
       rect:
         serializedVersion: 2
@@ -152,7 +131,7 @@ TextureImporter:
         width: 734
         height: 1242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +152,7 @@ TextureImporter:
         width: 1090
         height: 765
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,27 +160,6 @@ TextureImporter:
       bones: []
       spriteID: dc209fdc938221e30800000000000000
       internalID: 4472681608666219213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pedras da caverna_3
-      rect:
-        serializedVersion: 2
-        x: 3565
-        y: 2459
-        width: 5
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c3a3617086f541a0800000000000000
-      internalID: -6825778628691516471
       vertices: []
       indices: 
       edges: []
@@ -215,7 +173,7 @@ TextureImporter:
         width: 216
         height: 887
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +194,7 @@ TextureImporter:
         width: 528
         height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,27 +202,6 @@ TextureImporter:
       bones: []
       spriteID: a14f2e5dcae424f40800000000000000
       internalID: 5711213781688972314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pedras da caverna_6
-      rect:
-        serializedVersion: 2
-        x: 1172
-        y: 2318
-        width: 39
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48d8240fe04353c70800000000000000
-      internalID: 8950117073233808772
       vertices: []
       indices: 
       edges: []
@@ -278,7 +215,7 @@ TextureImporter:
         width: 983
         height: 431
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -295,11 +232,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1598
-        y: 395
-        width: 1129
+        y: 391
+        width: 1049
         height: 1880
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,7 +257,7 @@ TextureImporter:
         width: 1632
         height: 867
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,48 +265,6 @@ TextureImporter:
       bones: []
       spriteID: 6587ee684bc729bf0800000000000000
       internalID: -319055508790151082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pedras da caverna_10
-      rect:
-        serializedVersion: 2
-        x: 2773
-        y: 501
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5991a6b5d4213c250800000000000000
-      internalID: 5963630455024130453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pedras da caverna_11
-      rect:
-        serializedVersion: 2
-        x: 3107
-        y: 487
-        width: 20
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f38dc156f31eb630800000000000000
-      internalID: 3944612272278438898
       vertices: []
       indices: 
       edges: []
